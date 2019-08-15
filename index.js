@@ -9,7 +9,7 @@ app.get('/:person', (req, res) => {
     "yusuf":"https://www.google.com",
     "romeno":"https://www.wenogk.com"
   }
-  if(req.params.person in people) {
+  if(people.hasOwnProperty(req.params.person)) {
     let person =req.params.person;
     res.redirect(people.person);
   } else {
@@ -18,6 +18,4 @@ app.get('/:person', (req, res) => {
 
 });
 
-app.listen(process.env.PORT || 3000, () => console.log(`Example app listening on port!`))
-
-//http.listen();
+app.listen(process.env.PORT || 3000, () => console.log("Stuff is happening."))
