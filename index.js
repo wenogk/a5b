@@ -4,12 +4,12 @@ const app = express()
 
 app.get('/', (req, res) => res.send('Welcome to A5B 2ND FLOOR!'))
 
-app.get('/redirect/:person', (req, res) => {
+app.get('/:person', (req, res) => {
   let people = {
     "yusuf":"https://www.google.com",
     "romeno":"https://www.wenogk.com"
   }
-  if(req.params.userID in people) {
+  if(req.params.person in people) {
     let person =req. params.userID;
     res.redirect(people.person);
   } else {
