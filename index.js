@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-
+app.use(express.urlencoded());
 
 app.get('/', (req, res) => res.send('Welcome to A5B 2ND FLOOR!'))
 
