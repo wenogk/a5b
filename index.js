@@ -19,4 +19,9 @@ app.get('/:person', (req, res) => {
 
 });
 
+app.get("/qr/:person",(req,res)=> {
+  let person = req.params.person;
+  res.redirect("https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://a5b.herokuapp.com/" + person);
+});
+
 app.listen(process.env.PORT || 3000, () => console.log("Stuff is happening."))
