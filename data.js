@@ -1,6 +1,6 @@
 module.exports = {
-  method:"single", //either "single" or "multiple"
-  singleURL:"https://www.nyuad.nyu.edu",
+  method:"multiple", //either "single" or "multiple"
+  singleURL:"https://www.google.com",
   yusuf:"http://www.idesuk.com/how-has-lighting-changed-world/",
   ahmad:"https://www.ancient-origins.net/ancient-technology/revolutionary-invention-wheel-001713",
   rumail:"https://www.bbvaopenmind.com/en/articles/internet-changed-everyday-life/",
