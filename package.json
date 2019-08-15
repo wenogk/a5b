@@ -1,0 +1,22 @@
+{
+  "name": "a5b",
+  "version": "1.0.0",
+  "description": "QR CODE DYNAMIC STUFF",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wenogk/a5b.git"
+  },
+  "author": "Romeno Wenogk Fernando",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/wenogk/a5b/issues"
+  },
+  "homepage": "https://github.com/wenogk/a5b#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
