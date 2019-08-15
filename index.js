@@ -12,7 +12,7 @@ app.get('/:person', (req, res) => {
   }
   if(people.hasOwnProperty(req.params.person)) {
     let person = req.params.person;
-    res.redirect(people.person);
+    res.redirect(people.req.params.person);
   } else {
     res.send('I think you are lost. Welcome to A5B 2ND FLOOR though!')
   }
