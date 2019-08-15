@@ -9,5 +9,6 @@ module.exports = {
   yudai:"http://mentalfloss.com/article/92644/7-unexpected-ways-fire-changed-course-history",
   zhe:"https://www.printrunner.com/blog/printing-press-changed-world/",
   kaushal:"https://time.com/4307892/samuel-morse-telegraph-history/",
-  romeno:"https://www.wenogk.com"
+  romeno:"https://www.wenogk.com",
+  singleURL:"https://www.nyuad.nyu.edu"
 }

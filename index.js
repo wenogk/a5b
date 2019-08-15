@@ -6,11 +6,14 @@ app.use(express.urlencoded());
 app.get('/', (req, res) => res.send('Welcome to A5B 2ND FLOOR!'))
 
 app.get('/:person', (req, res) => {
+  let option = "multiple"; //either multiple or single
   console.log("person is " + req.params.person);
   let people = Data;
-  if(people.hasOwnProperty(req.params.person)) {
-    let person = req.params.person;
-    res.redirect(people[person]);
+  if((people.hasOwnProperty(req.params.person)) && (option=="single")) {
+    res.redirect(people.singleURL); //SINGLE URL
+  } else if((people.hasOwnProperty(req.params.person)) && (option=="multiple")) {
+      let person = req.params.person;
+      res.redirect(people[person]);
   } else {
     res.send('I think you are lost. Welcome to A5B 2ND FLOOR though!')
   }
