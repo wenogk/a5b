@@ -1,5 +1,5 @@
 module.exports = {
-  method:"multiple", //either "single" or "multiple"
+  method:"single", //either "single" or "multiple"
   singleURL:"https://www.google.com",
   yusuf:"http://www.idesuk.com/how-has-lighting-changed-world/",
   ahmad:"https://www.ancient-origins.net/ancient-technology/revolutionary-invention-wheel-001713",
