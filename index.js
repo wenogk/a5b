@@ -5,6 +5,7 @@ const app = express()
 app.get('/', (req, res) => res.send('Welcome to A5B 2ND FLOOR!'))
 
 app.get('/:person', (req, res) => {
+  console.log("person is " + req.params.person);
   let people = {
     "yusuf":"https://www.google.com",
     "romeno":"https://www.wenogk.com"
