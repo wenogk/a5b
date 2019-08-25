@@ -1,6 +1,6 @@
 module.exports = {
-  method:"multiple", //either "single" or "multiple"
-  singleURL:"https://www.google.com", //url will be used for all QRs if in "single" mode
+  method:"single", //either "single" or "multiple"
+  singleURL:"https://students.nyuad.nyu.edu/services/forms/facilities-service-request-form/", //url will be used for all QRs if in "single" mode
   yusuf:"http://www.idesuk.com/how-has-lighting-changed-world/",
   ahmad:"https://www.ancient-origins.net/ancient-technology/revolutionary-invention-wheel-001713",
   rumail:"https://www.bbvaopenmind.com/en/articles/internet-changed-everyday-life/",
