@@ -1,6 +1,6 @@
 module.exports = {
   method:"single", //either "single" or "multiple"
-  singleURL:"http://a5bevent1.rsvpify.com/", //url will be used for all QRs if in "single" mode
+  singleURL:"https://housing.nyu.edu/Apply/", //url will be used for all QRs if in "single" mode
   yusuf:"http://www.idesuk.com/how-has-lighting-changed-world/",
   ahmad:"https://www.ancient-origins.net/ancient-technology/revolutionary-invention-wheel-001713",
   rumail:"https://www.bbvaopenmind.com/en/articles/internet-changed-everyday-life/",
