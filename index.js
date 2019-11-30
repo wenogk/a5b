@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const Data = require('./data');
+const path = require('path');
 app.use(express.urlencoded());
 
 app.get('/', (req, res) => res.send('Welcome to A5B 2ND FLOOR!'))
@@ -20,7 +21,12 @@ app.get('/:person', (req, res) => {
   }
 
 });
-
+app.get("/asl" ,(req,res) => {
+  res.sendFile(path.join(__dirname + '/asl.html'));
+});
+app.get("/package-lock.json" ,(req,res) => {
+  res.sendFile(path.join(__dirname + '/package-lock.json'));
+});
 app.get("/qr/:person",(req,res)=> {
   let person = req.params.person;
   res.redirect("https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://a5b.herokuapp.com/" + person);

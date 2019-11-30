@@ -1,0 +1,34 @@
+
+<html>
+  <head>
+    <!-- Load TensorFlow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"> </script>
+
+
+    <!-- Place your code in the script tag below. You can also use an external .js file -->
+    <script>
+      // Notice there is no 'import' statement. 'tf' is available on the index-page
+      // because of the script tag above.
+
+      // Define a model for linear regression.
+      async function app() {
+      const webcamElement = document.getElementById('webcam');
+      const model = await tf.loadLayersModel('model.json');
+      // const webcam = tf.data.webcam(webcamElement);
+       const imgEl = document.getElementById('image_sample');
+
+        const img = webcam.capture();
+        const example = tf.fromPixels(imgEl);  // for example
+        const prediction = model.predict(example);
+        console.log(prediction)
+
+     }
+     app();
+
+    </script>
+  </head>
+
+  <body>
+    <img  id="img-sample" src="https://images2.pics4learning.com/catalog/k/k.jpg" />
+  </body>
+</html>
