@@ -1,6 +1,6 @@
 module.exports = {
   method:"single", //either "single" or "multiple"
-  singleURL:"https://housing.nyu.edu/Apply/", //url will be used for all QRs if in "single" mode
+  singleURL:"https://docs.google.com/document/u/1/d/e/2PACX-1vQLipDvIe9YE66tgh_-SC79aRDyQPgpAgs6S6WrqzFieTnEa8ie0Gn0HbkJMrO_HI25Eyr19zWSLZtv/pub", //url will be used for all QRs if in "single" mode
   yusuf:"http://www.idesuk.com/how-has-lighting-changed-world/",
   ahmad:"https://www.ancient-origins.net/ancient-technology/revolutionary-invention-wheel-001713",
   rumail:"https://www.bbvaopenmind.com/en/articles/internet-changed-everyday-life/",
