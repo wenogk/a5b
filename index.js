@@ -2,9 +2,20 @@ const express = require('express')
 const app = express()
 const Data = require('./data');
 const path = require('path');
+const request = require('request')
 app.use(express.urlencoded());
 
-app.get('/', (req, res) => res.send('Welcome to A5B 2ND FLOOR!'))
+app.get('/', (req, res) => {
+  let url = "http://www.dubaicoast.dm.gov.ae/API/Parameters/GetParameters?StationID=32&StartDate=2020-02-02"
+  request(url, function(err, resp, body){
+    let result;
+    try {
+      let jsonAll = JSON.parse(body);
+      res.json(jsonAll)
+    }
+});
+
+});
 
 app.get('/:person', (req, res) => {
    //either multiple or single
