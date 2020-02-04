@@ -13,6 +13,9 @@ app.get('/', (req, res) => {
       let jsonAll = JSON.parse(body);
       res.json(jsonAll)
     }
+    catch {
+      res.send("none");
+    }
 });
 
 });
