@@ -11,10 +11,15 @@ app.get('/', (req, res) => {
 });
 
 app.get('/scrape', (req, res) => {
+  let date = req.query.date;
+  let station = req.query.station;
+  /*
   let d = new Date();
   d = new Date(d.getTime());
   let date = d.getFullYear().toString()+"-"+((d.getMonth()+1).toString().length==2?(d.getMonth()+1).toString():"0"+(d.getMonth()+1).toString())+"-"+(d.getDate().toString().length==2?d.getDate().toString():"0"+d.getDate().toString());
-  let url = "http://www.dubaicoast.dm.gov.ae/API/Parameters/GetParameters?StationID=32&StartDate=" + date;
+  */
+  let url = "http://www.dubaicoast.dm.gov.ae/API/Parameters/GetParameters?StationID=" + station + "&StartDate=" + date;
+
   request(url, function(err, resp, body){
     let result;
     try {
