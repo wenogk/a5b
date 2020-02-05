@@ -4,8 +4,8 @@ const Data = require('./data');
 const path = require('path');
 const request = require('request')
 app.use(express.urlencoded());
-
-
+app.use(express.static('public'))
+app.use('/scraper', express.static('public'))
 app.get('/', (req, res) => {
       res.send("none");
 });
