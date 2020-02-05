@@ -66,7 +66,12 @@
             var items = [];
             $.each( data, function( key, val ) {
               console.log("key: " + key + " --- val: " + JSON.stringify(val.Variations))
-              items.push( "<li id='" + key + "'>" + val.ParameterName + " - " + val.Variations[0].ObsValue + val.UnitAbbreviation +  "</li>" );
+              let miniItems = "";
+              for(let x = 0; x<val.Variations.length ; x++) {
+                let item = val.Variations[x];
+                miniItems += "<li>" + val.ParameterName + " - " + item.ObsValue + val.UnitAbbreviation "</li>";
+              }
+              items.push( "<li id='" + key + "'><ul>" + miniItems + "</ul></li>" );
             });
             $("#dataHolder").html('');
 
