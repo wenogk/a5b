@@ -24,7 +24,7 @@ app.get('/scrape', (req, res) => {
     let result;
     try {
       let jsonAll = JSON.parse(body);
-      jsonAll = {...jsonAll, url : url}
+    //  jsonAll = {...jsonAll, url : url}
       res.json(jsonAll)
     }
     catch {

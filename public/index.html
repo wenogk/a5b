@@ -57,7 +57,6 @@
      <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
       <script>
         function loadData(random) {
-          alert("callback")
           let date = $("#dateValue").val();
           $.getJSON( " http://a5b.herokuapp.com/scrape?date=2020-02-02&station=32", function( data ) {
             var items = [];
