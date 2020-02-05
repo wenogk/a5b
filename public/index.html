@@ -68,11 +68,17 @@
             var items = [];
             $.each( data, function( key, val ) {
               let miniItems = "";
-              for(let x = 0; x<val.Variations.length ; x++) {
-                let item = val.Variations[x];
-                miniItems += "<tr><td>" + val.ParameterName + "</td><td>" + item.ObsValue + val.UnitAbbreviation + "</td></tr>";
-              }
-              items.push( "<table><td><table>" +  miniItems + "</table></td></tr>" );
+              if(val.Variations.length==1) {
+                 miniItems +="<tr><td>" + val.ParameterName + "</td><td>" + item.ObsValue + val.UnitAbbreviation + "</td></tr>"
+               } else {
+                 miniItems+="<table>"
+                 for(let x = 0; x<val.Variations.length ; x++) {
+                   let item = val.Variations[x];
+                   miniItems += "<tr><td>" + val.ParameterName + "</td><td>" + item.ObsValue + val.UnitAbbreviation + "</td></tr>";
+                 }
+                 miniItems+="</table>"
+               }
+              items.push( "<table><td>" +  miniItems + "</td></tr>" );
             });
 
             setTimeout(() => {
