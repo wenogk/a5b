@@ -5,7 +5,12 @@ const path = require('path');
 const request = require('request')
 app.use(express.urlencoded());
 
+
 app.get('/', (req, res) => {
+      res.send("none");
+});
+
+app.get('/scrape', (req, res) => {
   let url = "http://www.dubaicoast.dm.gov.ae/API/Parameters/GetParameters?StationID=32&StartDate=2020-02-02"
   request(url, function(err, resp, body){
     let result;
