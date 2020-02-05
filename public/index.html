@@ -65,7 +65,7 @@
         //  alert(date)
         console.log("date: " + date)
           $.getJSON( " http://a5b.herokuapp.com/scrape?station=32&date=" + date, function( data ) {
-            var items = [];
+            var items = ["<tbody>"];
             $.each( data, function( key, val ) {
               let miniItems = "";
               if(val.Variations.length==1) {
@@ -80,6 +80,7 @@
                }
               items.push( "<tr><td>" +  miniItems + "</td></tr>" );
             });
+            items.push( "</tbody>" );
 
             setTimeout(() => {
               $( "<table />", {
