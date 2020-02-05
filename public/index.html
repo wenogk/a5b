@@ -62,7 +62,7 @@
             var items = [];
             $.each( data, function( key, val ) {
               console.log("key: " + key + " --- val: " + JSON.stringify(val.Variations))
-              items.push( "<li id='" + key + "'>" + val.ParameterName + " - " + val.Variations[0].ObsValue + val.UnitAbbreviation "</li>" );
+              items.push( "<li id='" + key + "'>" + val.ParameterName + " - " + val.Variations[0].ObsValue + val.UnitAbbreviation +  "</li>" );
             });
             $("#dataHolder").html('');
 
