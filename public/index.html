@@ -22,7 +22,7 @@
     <script>
       $( document ).ready(function() {
 
-      $.getJSON( "scrape?date=2020-02-02&station=32", function( data ) {
+      $.getJSON( " http://a5b.herokuapp.com/scrape?date=2020-02-02&station=32", function( data ) {
         var items = [];
         $.each( data, function( key, val ) {
           items.push( "<li id='" + key + "'>" + val + "</li>" );
