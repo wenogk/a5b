@@ -62,7 +62,7 @@
           $.getJSON( " http://a5b.herokuapp.com/scrape?date=2020-02-02&station=32", function( data ) {
             var items = [];
             $.each( data, function( key, val ) {
-              console.log("key: " + key + " --- val: " + JSON.stringify(val))
+              console.log("key: " + key + " --- val: " + JSON.stringify(val.Variations))
               items.push( "<li id='" + key + "'>" + val.ParameterName + " - " + val.Variations[0].ObsValue + "</li>" );
             });
             $("#dataHolder").html('');
