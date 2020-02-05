@@ -69,7 +69,7 @@
             $.each( data, function( key, val ) {
               let miniItems = "";
               if(val.Variations.length==1) {
-                 miniItems +="<tr><td>" + val.ParameterName + "</td><td>" + item.ObsValue + val.UnitAbbreviation + "</td></tr>"
+                 miniItems +="<tr><td>" + val.ParameterName + "</td><td>" + val.Variations[0].ObsValue + val.UnitAbbreviation + "</td></tr>"
                } else {
                  miniItems+="<table>"
                  for(let x = 0; x<val.Variations.length ; x++) {
