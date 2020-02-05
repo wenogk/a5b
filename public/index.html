@@ -64,6 +64,7 @@
           let date = $("#dateValue").val();
         //  alert(date)
           function timeString(timestamp) {
+            timestamp = timestamp / 1000;
             console.log("timestamp: " + timestamp )
             return (new Date(timestamp).toLocaleDateString("en-US")) + " " + (new Date(timestamp).toLocaleTimeString("en-US"));
           }
