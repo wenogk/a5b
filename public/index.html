@@ -60,6 +60,7 @@
      <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
       <script>
         function loadData(random) {
+          $("#dataHolder").empty();
           let date = $("#dateValue").val();
         //  alert(date)
           $.getJSON( " http://a5b.herokuapp.com/scrape?station=32&date=" + date, function( data ) {
@@ -73,7 +74,7 @@
               }
               items.push( "<li id='" + key + "'><ul>" + miniItems + "</ul></li>" );
             });
-            $("#dataHolder").val("");
+
             setTimeout(() => {
               $( "<ul/>", {
                 "class": "my-new-list",
