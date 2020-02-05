@@ -79,7 +79,8 @@
         document.addEventListener('DOMContentLoaded', function() {
             var elems = document.querySelectorAll('.datepicker');
             let options = {
-              format : "yyyy-mm-dd"
+              format : "yyyy-mm-dd",
+              maxDate : Date.now()
             }
             var instances = M.Datepicker.init(elems, options);
             var elems = document.querySelectorAll('select');
