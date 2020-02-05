@@ -61,6 +61,7 @@
       <script>
         function loadData(random) {
           let date = $("#dateValue").val();
+          alert(date)
           $.getJSON( " http://a5b.herokuapp.com/scrape?station=32&date=" + date, function( data ) {
             var items = [];
             $.each( data, function( key, val ) {
