@@ -64,7 +64,7 @@
           let date = $("#dateValue").val();
         //  alert(date)
           function timeString(timestamp) {
-            return (new Date(timestamp).toLocaleDateString("en-US")) + " " (new Date(timestamp).toLocaleTimeString("en-US"));
+            return (new Date(timestamp).toLocaleDateString("en-US")) + " " + (new Date(timestamp).toLocaleTimeString("en-US"));
           }
         console.log("date: " + date)
           $.getJSON( " http://a5b.herokuapp.com/scrape?station=32&date=" + date, function( data ) {
