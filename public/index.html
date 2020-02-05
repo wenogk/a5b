@@ -70,13 +70,13 @@
               let miniItems = "";
               for(let x = 0; x<val.Variations.length ; x++) {
                 let item = val.Variations[x];
-                miniItems += "<li>" + val.ParameterName + " - " + item.ObsValue + val.UnitAbbreviation + "</li>";
+                miniItems += "<tr><td>" + val.ParameterName + "</td><td>" + item.ObsValue + val.UnitAbbreviation + "</td></tr>";
               }
-              items.push( "<li id='" + key + "'><ul>" + miniItems + "</ul></li>" );
+              items.push( "<table><td><table>" +  miniItems + "</table></td></tr>" );
             });
 
             setTimeout(() => {
-              $( "<ul/>", {
+              $( "<table/>", {
                 "class": "my-new-list",
                 html: items.join( "" )
               }).appendTo( "#dataHolder" );
