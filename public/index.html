@@ -63,10 +63,10 @@
           $("#dataHolder").empty();
           let date = $("#dateValue").val();
         //  alert(date)
+        console.log("date: " + date)
           $.getJSON( " http://a5b.herokuapp.com/scrape?station=32&date=" + date, function( data ) {
             var items = [];
             $.each( data, function( key, val ) {
-              console.log("key: " + key + " --- val: " + JSON.stringify(val.Variations))
               let miniItems = "";
               for(let x = 0; x<val.Variations.length ; x++) {
                 let item = val.Variations[x];
@@ -84,23 +84,7 @@
           }, 3000);
 
         }
-        function formatDate(date) {
-          var monthNames = [
-          "01", "02", "03",
-          "04", "05", "06", "07",
-          "08", "09", "10",
-          "11", "12"
-          ];
 
-          var day = date.getDate();
-          var monthIndex = date.getMonth();
-          var year = date.getFullYear();
-          if(day.length==1) {
-            day = "0" + day;
-          }
-
-  return year + '-' + monthNames[monthIndex] + '-' + day;
-}
         document.addEventListener('DOMContentLoaded', function() {
             var elems = document.querySelectorAll('.datepicker');
             let options = {
