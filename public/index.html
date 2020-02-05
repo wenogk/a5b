@@ -64,6 +64,7 @@
           let date = $("#dateValue").val();
         //  alert(date)
           function timeString(timestamp) {
+            console.log("timestamp: " + timestamp )
             return (new Date(timestamp).toLocaleDateString("en-US")) + " " + (new Date(timestamp).toLocaleTimeString("en-US"));
           }
         console.log("date: " + date)
