@@ -73,14 +73,16 @@
               }
               items.push( "<li id='" + key + "'><ul>" + miniItems + "</ul></li>" );
             });
-            $("#dataHolder").html('');
+            $("#dataHolder").html("");
+            setTimeout(() => {
+              $( "<ul/>", {
+                "class": "my-new-list",
+                html: items.join( "" )
+              }).appendTo( "#dataHolder" );
+            });
+            console.log( "ready!" ); 
+            }, 1000);
 
-            $( "<ul/>", {
-              "class": "my-new-list",
-              html: items.join( "" )
-            }).appendTo( "#dataHolder" );
-          });
-          console.log( "ready!" );
         }
         function formatDate(date) {
           var monthNames = [
