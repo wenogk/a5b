@@ -62,14 +62,14 @@
           $.getJSON( " http://a5b.herokuapp.com/scrape?date=2020-02-02&station=32", function( data ) {
             var items = [];
             $.each( data, function( key, val ) {
+              console.log("key: " + key + " --- val: " + JSON.stringify(val))
               items.push( "<li id='" + key + "'>" + val.ParameterName + " - " + val.Variations[0].ObsValue + "</li>" );
-
             });
             $("#dataHolder").html('');
 
             $( "<ul/>", {
               "class": "my-new-list",
-              html: items.join( "" )  
+              html: items.join( "" )
             }).appendTo( "#dataHolder" );
           });
           console.log( "ready!" );
