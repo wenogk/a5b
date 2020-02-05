@@ -56,17 +56,18 @@
      <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
       <script>
         function loadData() {
+          alert("callback")
           let date = $("#dateValue").val();
           $.getJSON( " http://a5b.herokuapp.com/scrape?date=2020-02-02&station=32", function( data ) {
             var items = [];
             $.each( data, function( key, val ) {
               items.push( "<li id='" + key + "'>" + JSON.stringify(val) + "</li>" );
             });
-
+            $("#dataHolder").html('');
             $( "<ul/>", {
               "class": "my-new-list",
               html: items.join( "" )
-            }).html( "#dataHolder" );
+            }).append( "#dataHolder" );
           });
           console.log( "ready!" );
         }
